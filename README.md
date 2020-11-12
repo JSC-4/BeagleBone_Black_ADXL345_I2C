@@ -1,1 +1,1 @@
-# BeagleBone_Black_ADXL345
+# BeagleBone_Black_ADXL345_I2C
