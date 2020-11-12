@@ -4,7 +4,7 @@
  Author      : JSC
  Website	 : https://www.jscblog.com/post/bbb-adxl345-3-axis-accelerometer
  Description : This project is to communicate with the ADXL345 3-axis Accelerometer
- 	 	 	   sensor using the BeagleBone Black.
+ 	 	 	   sensor using the BeagleBone Black (I2C).
  ====================================================================================
  */
 
@@ -68,7 +68,7 @@ int adxl354_init()
 		return -1;
 	}
 
-	// Configure the Power Control register to turn on measurment mode
+	// Configure the Power Control register to turn on measurement mode
 	writeBuffer[0] = ADXL345_REG_POWERCTL;
 	writeBuffer[1] = 0x08;
 	if (write(file, writeBuffer, 2) != 2)
